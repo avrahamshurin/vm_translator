@@ -1,1 +1,1 @@
-// eq constant 8
+// push pointer 1
