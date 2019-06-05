@@ -1,6 +1,7 @@
 a= "push    pointer       1// sdfgd"
+a = open("example.vm","r").read()
 file_name = "temp"
-b = a.split("//")[0].split(" ")
+b = a.split("//")[0].strip("\n").split(" ")
 c = [item for item in b if item != ""]
 memory_dic ={"local":"LCL","argument":"ARG","this":"THIS","that":"THAT","0":"THIS","1":"THAT"}
 print(b)
