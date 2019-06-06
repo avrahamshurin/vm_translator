@@ -12,8 +12,8 @@ class Vmtranslator:
 
 
 
-    def parse_file(self):
-        asmfile = open(self.target, "a+")
+    def code_generator(self):
+        asmfile = open(self.target, "w+")
         with open(self.source, "r") as vmfile:
             for line in vmfile:
                 info = self.get_info(line)
@@ -43,23 +43,23 @@ class Vmtranslator:
             if info[1] == "constant":
                 command = ("@{}\nD=A\n@SP\nA=M\nM=D\n@SP\nM=M+1".format(info[2]))
             elif info[1] == "local" or info[1] == "argument" or info[1] == "this" or info[1] == "that":
-                command = ("@{}\nD=A\n@{}\nA=M\nM=D+M\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1".format(info[2], self.MEMORY_DIC[info[1]]))
+                command = ("@{}\nD=A\n@{}\nA=M\nA=D+A\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1".format(info[2], self.MEMORY_DIC[info[1]]))
             elif info[1] == "static":
                 command = ("@{}.{}\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1".format(self.file_name, info[2]))
             elif info[1] == "temp":
                 command = ("@{}\nD=A\n@5\nA=D+A\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1".format(info[2]))
             elif info[1] == "pointer":
-                command = ("@{}\nA=M\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1".format(self.MEMORY_DIC[info[2]]))
+                command = ("@{}\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1".format(self.MEMORY_DIC[info[2]]))
 
         if info[0] == "pop":
             if info[1] == "local" or info[1] == "argument" or info[1] == "this" or info[1] == "that":
                 command = ("@{}\nD=A\n@{}\nD=D+M\n@address\nM=D\n@SP\nM=M-1\nA=M\nD=M\n@address\nA=M\nM=D".format(info[2],self.MEMORY_DIC[info[1]]))
-            elif [1] == "static":
+            elif info[1] == "static":
                 command = ("@SP\nM=M-1\nA=M\nD=M\n@{}.{}\nM=D".format(self.file_name, info[2]))
             elif info[1] == "temp":
                 command = ("@{}\nD=A\n@5\nD=D+A\n@address\nM=D\n@SP\nM=M-1\nA=M\nD=M\n@address\nA=M\nM=D".format(info[2]))
             elif info[1] == "pointer":
-                command = ("@SP\nM=M-1\nA=M\D=M@{}\nA=M\nM=D".format(self.MEMORY_DIC[info[2]]))
+                command = ("@SP\nM=M-1\nA=M\nD=M\n@{}\nM=D".format(self.MEMORY_DIC[info[2]]))
 
         if info[0] == "add":
             command = ("@SP\nM=M-1\nA=M\nD=M\nA=A-1\nM=M+D")
@@ -78,7 +78,7 @@ class Vmtranslator:
             self.label_index += 1
         elif info[0] == "and":
             command = ("@SP\nM=M-1\nA=M\nD=M\nA=A-1\nM=D&M")
-        elif info[0] == "and":
+        elif info[0] == "or":
             command = ("@SP\nM=M-1\nA=M\nD=M\nA=A-1\nM=D|M")
         elif info[0] == "not":
             command = ("@SP\nA=M-1\nM=!M")
@@ -87,8 +87,8 @@ class Vmtranslator:
 
 
 def main():
-    example = Vmtranslator(r"C:\Users\Avraham\Desktop\nand2tetris\projects\07\MemoryAccess\BasicTest\BasicTest.vm")
-    example.parse_file()
+    example = Vmtranslator(r"C:\Users\Avraham\Desktop\nand2tetris\projects\07\StackArithmetic\StackTest\StackTest.vm")
+    example.code_generator()
 
 if __name__ == '__main__':
     main() 

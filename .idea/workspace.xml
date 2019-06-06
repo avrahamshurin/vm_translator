@@ -32,14 +32,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2476" />
+          <entry key="py" value="2548" />
           <entry key="vm" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="15" />
-          <entry key="Python" value="2476" />
+          <entry key="Python" value="2548" />
         </counts>
       </usages-collector>
     </session>
@@ -67,14 +67,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vmtranslator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+            <state relative-caret-position="240">
+              <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
               <folding>
-                <marker date="1559770443503" expanded="true" signature="153:158" ph="..." />
-                <marker date="1559770443503" expanded="true" signature="756:843" ph="..." />
-                <marker date="1559770443503" expanded="true" signature="878:1034" ph="..." />
-                <marker date="1559770443503" expanded="true" signature="1057:1105" ph="..." />
-                <marker date="1559770443503" expanded="true" signature="3927:4070" ph="..." />
+                <marker date="1559837088013" expanded="true" signature="153:158" ph="..." />
+                <marker date="1559837088013" expanded="true" signature="760:847" ph="..." />
+                <marker date="1559837088013" expanded="true" signature="882:1038" ph="..." />
+                <marker date="1559837088013" expanded="true" signature="1061:1109" ph="..." />
+                <marker date="1559837088013" expanded="true" signature="3927:4077" ph="..." />
               </folding>
             </state>
           </provider>
@@ -113,9 +113,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
-    <option name="y" value="220" />
-    <option name="width" value="638" />
+    <option name="x" value="1034" />
+    <option name="y" value="215" />
+    <option name="width" value="841" />
     <option name="height" value="438" />
   </component>
   <component name="ProjectView">
@@ -225,7 +225,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22068231" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.716263" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
@@ -248,17 +248,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/vmtranslator.py</url>
-          <line>89</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/result.txt">
@@ -296,14 +285,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vmtranslator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        <state relative-caret-position="240">
+          <caret line="75" column="29" lean-forward="true" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding>
-            <marker date="1559770443503" expanded="true" signature="153:158" ph="..." />
-            <marker date="1559770443503" expanded="true" signature="756:843" ph="..." />
-            <marker date="1559770443503" expanded="true" signature="878:1034" ph="..." />
-            <marker date="1559770443503" expanded="true" signature="1057:1105" ph="..." />
-            <marker date="1559770443503" expanded="true" signature="3927:4070" ph="..." />
+            <marker date="1559837088013" expanded="true" signature="153:158" ph="..." />
+            <marker date="1559837088013" expanded="true" signature="760:847" ph="..." />
+            <marker date="1559837088013" expanded="true" signature="882:1038" ph="..." />
+            <marker date="1559837088013" expanded="true" signature="1061:1109" ph="..." />
+            <marker date="1559837088013" expanded="true" signature="3927:4077" ph="..." />
           </folding>
         </state>
       </provider>
